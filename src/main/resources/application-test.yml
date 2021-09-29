@@ -1,0 +1,11 @@
+# 测试环境  单机HA 部署时自行配置端口号
+spring:
+  profiles: dev
+eureka:
+  environment: dev
+  client:
+    service-url:
+      defaultZone: http://t4:8761/eureka,http://t5:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}

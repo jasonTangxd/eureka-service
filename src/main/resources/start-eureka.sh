@@ -1,0 +1,1 @@
+nohup java -jar ./eureka-service-1.0-SNAPSHOT.jar >./log.out 2>&1 &
